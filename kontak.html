@@ -1,0 +1,90 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Halaman Kontak</title>
+    <link href="https://fonts.googleapis.com/css2?family-Poppins:wght@4000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/aldo.css">
+
+</head>
+
+<body>
+    <header style="background-color: #f0f0f0; padding: 10px; text-align: center;">
+        <h1>Kontak</h1>
+    </header>
+
+    <nav style="background-color: #e0e0e0; padding: 10px;">
+        <ul style="list-style-type: none; margin: 0; padding: 0;">
+            <li style="display: inline; margin-right: 10px;"><a href="index.html">Beranda</a></li>
+            <li style="display: inline; margin-right: 10px;"><a href="biodata.html">Biodata</a></li>
+            <li style="display: inline; margin-right: 10px;"><a href="kontak.html">Kontak</a></li>
+            <li style="display: inline; margin-right: 10px;"><a href="login.html">Login</a></li>
+            <li style="display: inline; margin-right: 10px;"><a href="register.html">Registerasi</a></li>
+
+        </ul>
+    </nav>
+
+    <img src="img/r.jpg" width="1336px" height="500px" style="margin-top: 10px;">
+
+ <div>
+    <div style="display: flex; padding: 20px;">
+        <div style="flex: 3; padding-right: 20px;">
+    <form id="contactForm">
+        <fieldset>
+            <legend>Kontak</legend>
+            <p>
+                <label>Nama:</label>
+                <input type="text" name="nama" placeholder="Nama anda... " id="nama" />
+            </p>
+            <p>
+                <label>Subjek:</label>
+                <input type="text" name="subjek" placeholder="Subjek... " id="subjek" />
+            </p>
+            <p>
+                <label>Email:</label>
+                <input type="text" name="Email" placeholder="Email anda... " id="email" />   
+            </p>
+            <p>
+                <button type="button" onclick="sendMessage()">Send</button>
+            </p>
+        </fieldset>
+    </form>
+
+    <h3>Lokasi Saya</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.7023605445493!2d128.19109106599603!3d-3.655145421096193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d6ceed4da143ad1%3A0x86f5832977860f8c!2sFaculty%20of%20Science%20and%20Technology%2C%20Pattimura%20University!5e0!3m2!1sen!2sid!4v1743772106668!5m2!1sen!2sid" 
+    width="850" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+ </div>   
+
+        <aside style="flex: 1; background-color: #f0f0f0; padding: 10px;">
+            <h3>Alternatif Link</h3>
+            <p>Ini adalah sidebar dengan alternatif link:</p>
+            <ul>
+                <li><a href="https://unpatti.ac.id/">Website Univesitas</a></li>
+                <li><a href="https://fst.unpatti.ac.id/">Website Fakultas</a></li>
+                <li><a href="https://ilkom.fst.unpatti.ac.id/">Website Prodi</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer style="background-color: #e0e0e0; padding: 10px; text-align: center;">
+        <p>&copy;  2025 Rivaldo Louis Istia. All Rights Reserved.</p>
+    </footer>
+</body>
+
+<script>
+    function sendMessage() {
+
+        var nama = document.getElementById("nama").Value;
+        var subjek = document.getElementById("subjek").Value;
+        var email = document.getElementById("email").Value;
+
+        alert("Pesan terkirim!\n\nNama: " + nama + " \nSubjek: " + subjek + " \nEmail: " + email);
+
+        document.getElementById("nama").Value = "";
+        document.getElementById("subjek").Value = "";
+        document.getElementById("email").Value = "";
+        
+    }
+</script>
+
+</html>
